@@ -1,10 +1,12 @@
 from bs4 import BeautifulSoup
 import json
+import requests
+import os
 #the website for scraping data.
 url = "https://www.paulgraham.com/reddits.html"
 
 #creating function for looping to scrape essays.
-
+def scrape_essays(url):
      response = requests.get(url)
      essays_dt = response.content
 
